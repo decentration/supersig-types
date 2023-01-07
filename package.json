@@ -1,12 +1,12 @@
 {
   "name": "supersig-types",
   "version": "0.0.1",
-  "description": "A sample using @polkadot/typegen to generate type definitions",
+  "description": "custom types for supersig node",
   "main": "index.js",
-  "repository": "https://github.com/jacogr/sample-polkadotjs-typegen",
-  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "repository": "https://github.com/decentration/supersig-types",
+  "author": "Ramsey Ajram <ramsey@decentration.org>",
   "license": "The Unlicense",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "yarn generate:defs && yarn generate:meta",
     "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package supersig/interfaces --input ./src/interfaces --endpoint ./supersig-node.json",
