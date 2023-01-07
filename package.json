@@ -1,6 +1,6 @@
 {
   "name": "supersig-types",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "custom types for supersig node",
   "repository": "https://github.com/decentration/supersig-types",
   "author": "Ramsey Ajram <ramsey@decentration.org>",
