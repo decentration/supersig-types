@@ -14,7 +14,7 @@
     "typeRoots": ["./node_modules/@polkadot/ts", "./node_modules/@types"],
     "paths": {
       // this is the package name we use (in the interface imports, --package for generators)
-      "@supersig/*": ["src/*"],
+      "@supersig-types/*": ["src/*"],
       // here we replace the @polkadot/api augmentation with our own, generated from chain
       "@polkadot/api/augment": ["src/interfaces/augment-api.ts"],
       "@polkadot/types/lookup": ["src/interfaces/types-lookup.ts"],
