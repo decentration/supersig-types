@@ -1,24 +1,39 @@
 {
   "name": "supersig-types",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "custom types for supersig node",
-  "main": "index.js",
   "repository": "https://github.com/decentration/supersig-types",
   "author": "Ramsey Ajram <ramsey@decentration.org>",
-  "license": "The Unlicense",
-  "private": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "license": "GPL-3.0",
   "scripts": {
-    "build": "yarn generate:defs && yarn generate:meta",
+    "build": "rm -fr dist/* && rollup -c",
+    "buildTypes": "yarn generate:defs && yarn generate:meta",
     "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package supersig/interfaces --input ./src/interfaces --endpoint ./supersig-node.json",
     "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package supersig/interfaces --endpoint ./supersig-node.json --output ./src/interfaces --strict",
     "lint": "tsc --noEmit --pretty"
   },
-  "dependencies": {
-    "@polkadot/api": "^9.10.2"
-  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "supersig",
+    "types"
+  ],
   "devDependencies": {
     "@polkadot/typegen": "^9.10.2",
-    "ts-node": "^8.6.2",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "rollup": "^2.72.0",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.6.2"
   }
 }
