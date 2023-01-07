@@ -1,5 +1,5 @@
 {
-  "name": "supersig",
+  "name": "supersig-types",
   "version": "0.0.1",
   "description": "A sample using @polkadot/typegen to generate type definitions",
   "main": "index.js",
