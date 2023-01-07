@@ -1,6 +1,6 @@
 {
   "name": "supersig-types",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "custom types for supersig node",
   "main": "index.js",
   "repository": "https://github.com/decentration/supersig-types",
