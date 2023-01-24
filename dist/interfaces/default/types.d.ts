@@ -1,4 +1,5 @@
 import type { Bytes, Enum, Struct, Vec, u32 } from '@polkadot/types-codec';
+import type { ITuple } from '@polkadot/types-codec/types';
 import type { AccountId } from '@polkadot/types/interfaces/runtime';
 /** @name CallId */
 export interface CallId extends u32 {
@@ -12,6 +13,15 @@ export interface FetchListProposals extends Struct {
 export interface FetchProposalState extends Struct {
     readonly proposal_info: ProposalState;
     readonly no_of_members: u32;
+}
+/** @name MemberList */
+export interface MemberList extends Struct {
+    readonly account: AccountId;
+    readonly role: Role;
+}
+/** @name MembersList */
+export interface MembersList extends Struct {
+    readonly member_info: Vec<ITuple<[AccountId, Role]>>;
 }
 /** @name ProposalState */
 export interface ProposalState extends Struct {
@@ -35,5 +45,13 @@ export interface Role extends Enum {
 }
 /** @name SupersigId */
 export interface SupersigId extends u32 {
+}
+/** @name SupersigIdInfo */
+export interface SupersigIdInfo extends Struct {
+    readonly supersig_id: u32;
+}
+/** @name UserSupersig */
+export interface UserSupersig extends Struct {
+    readonly user_supersigs: Vec<SupersigIdInfo>;
 }
 export type PHANTOM_DEFAULT = 'default';

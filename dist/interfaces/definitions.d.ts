@@ -8,6 +8,9 @@ declare const _default: {
             };
         };
         SupersigId: string;
+        SupersigIdInfo: {
+            supersig_id: string;
+        };
         CallId: string;
         ProposalStates: string;
         FetchListProposals: {
@@ -23,6 +26,16 @@ declare const _default: {
         FetchProposalState: {
             proposal_info: string;
             no_of_members: string;
+        };
+        MemberList: {
+            account: string;
+            role: string;
+        };
+        MembersList: {
+            member_info: string;
+        };
+        UserSupersig: {
+            user_supersigs: string;
         };
     };
 };

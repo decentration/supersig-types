@@ -1,6 +1,4 @@
 // order here matches with what is found in (unused removed)
-//   https://www.npmjs.com/package/edgeware-node-types
-//   https://github.com/hicommonwealth/edgeware-node-types/tree/master/types
 
 export default  {
     types: {
@@ -12,6 +10,9 @@ export default  {
           }
         },
         SupersigId: 'u32',
+        SupersigIdInfo: {
+          supersig_id: 'u32',
+        },
         CallId: 'u32',
         ProposalStates: 'Vec<ProposalState<AccountId>>',
         FetchListProposals: {
@@ -27,6 +28,18 @@ export default  {
         FetchProposalState: {
           proposal_info: 'ProposalState<AccountId>',
           no_of_members: 'u32'
+        },
+        MemberList: {
+          account: 'AccountId',
+          role: 'Role',
+        },
+        MembersList: {
+          member_info: 'Vec<(AccountId, Role)>',
+        },
+        UserSupersig: {
+          user_supersigs: 'Vec<SupersigIdInfo>'
         }
+
+
       },
   }

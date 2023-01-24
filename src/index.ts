@@ -43,7 +43,7 @@ export const mRpc = {
             type: 'AccountId'
           }
         ],
-        type: 'Vec<SupersigId>'
+        type: 'UserSupersig'
       },
       listMembers: {
         description: 'List members of the supersig',
@@ -53,7 +53,7 @@ export const mRpc = {
             type: 'AccountId'
           }
         ],
-        type: 'Vec<(AccountId, Role)>'
+        type: 'MembersList'
       },
       listProposals: {
         description: 'List proposals associated to a supersig',
